@@ -1,2 +1,39 @@
-@import url(../variables/_main.scss);
+@import "../variables/main";
+@include resetstyles;
 
+.principalWrapper {
+    @media (min-width: 200px){
+        width: 100%;
+    }
+
+    @media (min-width: 1200px){
+        width: 1200px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 3rem 0;
+    background: $main-pink;
+
+    @media(max-width: 1200px){
+        padding: 1.2rem 1rem 1rem 1.5rem;
+    }
+
+    .principalWrapper {
+        @include orderFlex (column, justify-content,center)
+    }
+    .register {
+        @include orderFlex (row, space-between, center)
+    }
+
+    .logo{
+        @include imageSize (40%, auto);
+        padding: 1rem;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+}
