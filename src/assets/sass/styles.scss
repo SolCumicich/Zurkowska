@@ -22,18 +22,18 @@ header {
     }
 
     .principalWrapper {
-        @include orderFlex (column, justify-content,center)
+        @include orderFlex (column, justify-content, center)
     }
-    .register {
-        @include orderFlex (row, space-between, center)
+    div :nth-child(1) {
+        @include orderFlex (row, space-between, space-between)
     }
 
     .logo{
-        @include imageSize (40%, auto);
+        @include imageSize (30%, auto);
         padding: 1rem;
     }
 
     img {
-        border-radius: 50%;
+        border-radius: 15%;
     }
 }

@@ -61,19 +61,19 @@ header .principalWrapper {
   justify-content: justify-content;
   align-items: center;
 }
-header .register {
+header div :nth-child(1) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
 }
 header .logo {
-  width: 40%;
+  width: 30%;
   height: auto;
   padding: 1rem;
 }
 header img {
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 /*# sourceMappingURL=styles.css.map */
