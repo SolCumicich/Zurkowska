@@ -1,39 +1,39 @@
 @import "../variables/main";
 @include resetstyles;
 
-.principalWrapper {
-    @media (min-width: 200px){
-        width: 100%;
-    }
-
-    @media (min-width: 1200px){
-        width: 1200px;
-    }
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0 3rem 0;
-    background: $main-pink;
-
-    @media(max-width: 1200px){
-        padding: 1.2rem 1rem 1rem 1.5rem;
-    }
-
-    .principalWrapper {
-        @include orderFlex (column, justify-content, center)
-    }
-    div :nth-child(1) {
-        @include orderFlex (row, space-between, space-between)
-    }
-
-    .logo{
-        @include imageSize (30%, auto);
-        padding: 1rem;
-    }
-
-    img {
-        border-radius: 15%;
+main {
+    header {
+        position: sticky; top: 0;
+        background: $main-pink;
+        nav {
+            @include orderFlex (row, space-between, center);
+            div {
+                margin: 1rem;
+                img {
+                    @include imageSize (10%, auto);
+                    border-radius: 30%;
+                    @media (max-width:750px){
+                        @include imageSize (40%, auto);
+                    }
+                }
+            }
+            .menu {
+                margin: 1rem;
+                ul {
+                    @include orderFlex (row, space-between, flex-end);
+                    li {
+                        margin: 0.5rem;
+                        transition: 0.3s;
+                        &:hover {
+                            border-bottom: 2px solid $main-white;
+                        }
+                        a {
+                            color:$main-white;
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
