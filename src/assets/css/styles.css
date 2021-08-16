@@ -38,12 +38,12 @@ main header {
     main header nav div {
       margin: 1rem; }
       main header nav div img {
-        width: 10%;
+        width: 35%;
         height: auto;
-        border-radius: 30%; }
+        border-radius: 5%; }
         @media (max-width: 750px) {
           main header nav div img {
-            width: 40%;
+            width: 50%;
             height: auto; } }
     main header nav .menu {
       margin: 1rem; }
@@ -60,3 +60,71 @@ main header {
           main header nav .menu ul li a {
             color: #fafafa;
             font-size: 19px; }
+
+main .productos
+ul {
+  width: 100%;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (max-width: 1200px) {
+    main .productos
+ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; } }
+  main .productos
+ul li {
+    flex: 0 0 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 5rem;
+    box-shadow: 2px 0px 17px 2px rgba(0, 0, 0, 0.3); }
+    @media (max-width: 1200px) {
+      main .productos
+ul li {
+        width: 400px; } }
+    @media (max-width: 575px) {
+      main .productos
+ul li {
+        width: 300px; } }
+    main .productos
+ul li div img {
+      width: 13rem;
+      height: auto; }
+    main .productos
+ul li span:first-of-type {
+      color: #000000;
+      font-size: 1.3rem;
+      margin-top: 1.5rem; }
+      @media (max-width: 1200px) {
+        main .productos
+ul li span:first-of-type {
+          font-size: 7vw; } }
+    main .productos
+ul li span:last-of-type {
+      color: #000000;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1rem 0; }
+    main .productos
+ul li button {
+      background: #ad56ad;
+      color: #fafafa;
+      text-transform: uppercase;
+      padding: 0.8rem 4rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer; }

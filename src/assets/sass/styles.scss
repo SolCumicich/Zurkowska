@@ -10,10 +10,10 @@ main {
             div {
                 margin: 1rem;
                 img {
-                    @include imageSize (10%, auto);
-                    border-radius: 30%;
+                    @include imageSize (35%, auto);
+                    border-radius: 5%;
                     @media (max-width:750px){
-                        @include imageSize (40%, auto);
+                        @include imageSize (50%, auto);
                     }
                 }
             }
@@ -36,4 +36,76 @@ main {
             }
         }
     }
-}
+    .conocenos {
+
+    }
+    .productos
+        ul {
+            width: 100%;
+            margin-top: 7rem;
+            @include orderFlex(row, space-between, center);
+            flex-wrap: wrap;
+
+            @media (max-width: 1200px){
+                @include orderFlex(column, space-between, center);
+            }
+
+            li {
+                flex:  0 0 270px;
+                @include orderFlex(column, center, center);
+                background: $main-white;
+                border-radius: 1.5rem;
+                padding: 2.5rem;
+                margin-bottom: 5rem;
+                box-shadow: 2px 0px 17px 2px rgba($main-black,0.30);
+
+                @media (max-width: 1200px){
+                    width: 400px;
+                }
+
+                @media (max-width: 575px){
+                    width: 300px;
+                }
+
+                div {
+                    img {
+                        @include imageSize(13rem, auto);
+                    }
+                }
+
+                span {
+                    &:first-of-type {
+                        color: $main-black;
+                        font-size: 1.3rem;
+                        margin-top: 1.5rem;
+
+                        @media (max-width: 1200px){
+                            font-size: 7vw;
+                        }
+                    }
+
+                    &:last-of-type {
+                        color: $main-black;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        margin: 1rem 0;
+                    }
+                }
+
+                button {
+                    background: $main-violet;
+                    color: $main-white;
+                    text-transform: uppercase;
+                    padding: 0.8rem 4rem;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
