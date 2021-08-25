@@ -36,15 +36,14 @@ main header {
     justify-content: space-between;
     align-items: center; }
     main header nav div {
-      margin: 1rem; }
+      margin: 0.5rem; }
       main header nav div img {
-        width: 35%;
+        width: 40%;
         height: auto;
         border-radius: 5%; }
         @media (max-width: 750px) {
           main header nav div img {
-            width: 50%;
-            height: auto; } }
+            display: none; } }
     main header nav .menu {
       margin: 1rem; }
       main header nav .menu ul {
@@ -60,6 +59,35 @@ main header {
           main header nav .menu ul li a {
             color: #fafafa;
             font-size: 19px; }
+
+main .conocenos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 1rem 5rem 1rem;
+  border-bottom: 1px solid #7f9bf7; }
+  main .conocenos img {
+    width: 30rem;
+    height: auto; }
+    @media (max-width: 750px) {
+      main .conocenos img {
+        width: 22rem;
+        height: auto;
+        margin-top: 1rem; } }
+  main .conocenos p {
+    font-size: 21px;
+    text-align: center; }
+    @media (max-width: 750px) {
+      main .conocenos p {
+        margin: 2rem 0 1.5rem 0; } }
+  @media (max-width: 750px) {
+    main .conocenos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0; } }
 
 main .productos
 ul {
@@ -79,16 +107,15 @@ ul {
       align-items: center; } }
   main .productos
 ul li {
-    flex: 0 0 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #fafafa;
-    border-radius: 1.5rem;
-    padding: 2.5rem;
+    border-radius: 1rem;
+    padding: 2rem;
     margin-bottom: 5rem;
-    box-shadow: 2px 0px 17px 2px rgba(0, 0, 0, 0.3); }
+    box-shadow: 2px 0px 17px 2px rgba(0, 0, 0, 0.4); }
     @media (max-width: 1200px) {
       main .productos
 ul li {
@@ -109,7 +136,7 @@ ul li span:first-of-type {
       @media (max-width: 1200px) {
         main .productos
 ul li span:first-of-type {
-          font-size: 7vw; } }
+          font-size: 5vw; } }
     main .productos
 ul li span:last-of-type {
       color: #000000;

@@ -8,12 +8,12 @@ main {
         nav {
             @include orderFlex (row, space-between, center);
             div {
-                margin: 1rem;
+                margin: 0.5rem;
                 img {
-                    @include imageSize (35%, auto);
+                    @include imageSize (40%, auto);
                     border-radius: 5%;
                     @media (max-width:750px){
-                        @include imageSize (50%, auto);
+                        display: none;
                     }
                 }
             }
@@ -37,7 +37,27 @@ main {
         }
     }
     .conocenos {
-
+        @include orderFlex (row, space-between, center);
+        margin: 1.5rem 1rem 5rem 1rem;
+        border-bottom: 1px solid $main-lightblue;
+        img {
+            @include imageSize(30rem, auto);
+            @media (max-width:750px){
+                @include imageSize(22rem,auto);
+                margin-top: 1rem;
+            }
+        }
+        p{
+            font-size: 21px;
+            text-align: center;
+            @media (max-width:750px){
+                margin: 2rem 0 1.5rem 0;
+            }
+        }
+        @media (max-width: 750px){
+            @include orderFlex (column, space-between, center);
+            margin-top: 0;
+        }
     }
     .productos
         ul {
@@ -51,13 +71,12 @@ main {
             }
 
             li {
-                flex:  0 0 270px;
                 @include orderFlex(column, center, center);
                 background: $main-white;
-                border-radius: 1.5rem;
-                padding: 2.5rem;
+                border-radius: 1rem;
+                padding: 2rem;
                 margin-bottom: 5rem;
-                box-shadow: 2px 0px 17px 2px rgba($main-black,0.30);
+                box-shadow: 2px 0px 17px 2px rgba($main-black,0.40);
 
                 @media (max-width: 1200px){
                     width: 400px;
@@ -80,7 +99,7 @@ main {
                         margin-top: 1.5rem;
 
                         @media (max-width: 1200px){
-                            font-size: 7vw;
+                            font-size: 5vw;
                         }
                     }
 
@@ -106,6 +125,4 @@ main {
                 }
             }
         }
-
     }
-
