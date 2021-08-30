@@ -11,7 +11,7 @@ main {
         nav {
             @include orderFlex (row, space-between, center);
             div {
-                margin: 0.4rem;
+                margin: 0.5rem 0 0.5rem 1rem;
                 img {
                     @include imageSize (35%, auto);
                     border-radius: 5%;
@@ -25,7 +25,7 @@ main {
                 ul {
                     @include orderFlex (row, space-between, center);
                     li {
-                        margin-right: 0.7rem;
+                        margin-left: 0.7rem;
                         transition: 0.3s;
                         &:hover {
                             border-bottom: 1px solid $main-white;
@@ -35,6 +35,9 @@ main {
                             font-size: 19px;
                             @media (max-width: 667px){
                                 font-size: 17px;
+                            }
+                            @media (max-width: 768px){
+                                font-size: 15px;
                             }
                         }
                         .dropdown {
@@ -79,6 +82,9 @@ main {
                 @include imageSize(22rem,auto);
                 margin-top: 1rem;
             }
+            @media (max-width: 350px){
+                @include imageSize(17rem, auto)
+            }
         }
         p{
             font-size: 21px;
@@ -86,6 +92,9 @@ main {
             margin-left: 2.5rem;
             @media (max-width:768px){
                 margin: 2rem 0 1.5rem 0;
+            }
+            @media (max-width: 350px){
+                font-size: 17   px;
             }
         }
         @media (max-width: 768px){
@@ -128,12 +137,8 @@ main {
                         color: $main-black;
                         font-size: 1.3rem;
                         margin-top: 1.5rem;
-                        @media (max-width: 1200px){
-                            font-size: 4vw;
-                        }
-                        @media (min-width: 768px){
-                            fint-size: 4vw;
-                        }
+
+
                     }
                     &:last-of-type {
                         color: $main-black;
@@ -251,7 +256,20 @@ main {
     /*Footer*/
 
     .contacto {
-        @include orderFlex (row, space-between, center);
-        margin-bottom: 2rem;
+        @include orderFlex (column, space-between, center);
+        padding: 1.5rem;
+        background: rgba($main-lightpink,0.40);
+        ul {
+            @include orderFlex (row, space-around, center);
+            margin-bottom: 0.7rem;
+            li{
+                &:last-of-type {
+                    padding-left: 5rem;
+                }
+                a{
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }
