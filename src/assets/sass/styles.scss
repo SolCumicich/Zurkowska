@@ -79,7 +79,7 @@ main {
         img {
             @include imageSize(30rem, auto);
             @media (max-width:768px){
-                @include imageSize(22rem,auto);
+                @include imageSize(20rem,auto);
                 margin-top: 1rem;
             }
             @media (max-width: 350px){
